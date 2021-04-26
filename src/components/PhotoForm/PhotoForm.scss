@@ -1,0 +1,32 @@
+.photo-form {
+  $primary: #efb6b2;
+  $secondary: #adadad;
+  label {
+    input {
+      display: none;
+    }
+    span {
+      margin: 0 auto;
+      height: 3rem;
+      width: 3rem;
+      background-color: transparent;
+
+      display: flex;
+      justify-content: center;
+
+      color: $primary;
+      border-radius: 2rem;
+      border: 1px solid $secondary;
+      font-size: 2rem;
+      
+      cursor: pointer;
+      transition: all .5s ease-in-out;
+
+      &:hover {
+        background-color: $primary;
+        color: white;
+        border: 1px solid white;
+      }
+    }
+  }
+}

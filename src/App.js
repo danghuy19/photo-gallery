@@ -1,23 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import PropTypes from 'prop-types';
+import Title from "./components/Title";
+import PhotoForm from "./components/PhotoForm";
+import "./App.scss"
+import Photo from './components/Photo';
+import Modal from "./components/Modal";
 
-function App() {
+App.propTypes = {
+  
+};
+
+function App(props) {
+  const [selectedImage, setSelectedImage] = useState(null);
+  console.log(selectedImage);
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="photo-container">
+      <Title />
+      <PhotoForm />
+      <Photo setSelectedImage={setSelectedImage} />
+      { selectedImage && <Modal selectedImage={selectedImage} setSelectedImage={setSelectedImage} /> }
     </div>
   );
 }

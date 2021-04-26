@@ -1,0 +1,23 @@
+.pic-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    width: 90%;
+    margin: 2rem auto;
+
+    .pic {
+        width: 300px;
+        height: 350px;
+        overflow: hidden;
+
+        margin-bottom: 2rem;
+        margin-right: 2rem;
+
+        cursor: pointer;
+        opacity: .8;
+
+        img {
+            width: 100%;
+        }
+    }
+}
